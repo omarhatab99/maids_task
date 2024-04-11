@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="card card-custom gutter-b">
+        <div class="card-body">
+            <div class="d-flex flex-column flex-md-row">
+                <!--begin::Pic-->
+                <div class="flex-shrink-0">
+                    <div class="symbol symbol-50 symbol-lg-120">
+                        <img alt="Pic" [src]="userDetails?.avatar" class="rounded me-2">
+                    </div>
+                </div>
+                <div class="info d-flex justify-content-between w-100">
+                    <div class="personal-info">
+                        <div>
+                            <span class="personal-image fw-semibold py-2 mt-2" style="letter-spacing: 1px;">{{userDetails?.first_name}} {{userDetails?.last_name}}</span>
+                            <span class="personal-role rounded ms-2" style="background-color: #E1F0FF; color:#3699FF; padding: 3px 10px;">user</span>
+                        </div>
+                        <div class="d-flex flex-column flex-md-row">
+                            <span class="text-muted py-2 d-inline- fw-semibold me-3">
+                                <i class="fa-regular fa-envelope"></i>
+                                {{userDetails?.email}}
+                            </span>
+                            <span class="text-muted py-2 d-inline-block fw-semibold me-3">
+                                <i class="fa-regular fa-address-card"></i>
+                                {{userDetails?.first_name}}
+                            </span>
+                            <span class="text-muted py-2 d-inline-block fw-semibold">
+                                <i class="fa-regular fa-address-card"></i>
+                                {{userDetails?.last_name}}
+                            </span>
+                        </div>
+                        <div class="text-muted w-75">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium, officiis? Itaque quos possimus illum earum! officiis? Itaque quos possimus illum earum!
+                        </div>
+                    </div>
+                    <div class="personal-action">
+                        <a mat-raised-button color="primary" routerLink="/users">Back</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

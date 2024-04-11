@@ -1,0 +1,38 @@
+
+<!--start section header-->
+    <section id="header" class="header"> 
+        <nav class="navbar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../../assets/logo.png" alt="logo" style="width: 130px;">
+                </a>
+                <div class="profile">
+                    <div class="dark-mode">
+                        <span [class.active]="mode == 'light'" class="material-icons-sharp active" (click)="changeMode('light')">
+                            light_mode
+                        </span>
+                        <span [class.active]="mode == 'dark'" class="material-icons-sharp" (click)="changeMode('dark')">
+                            dark_mode
+                        </span>
+                    </div>
+                    <div class="dropdown">
+                        <div class="profile-info" data-bs-toggle="dropdown" aria-expanded="false">
+                            <div class="info">
+                                <p><small data-i18n="hey">Hey</small>, <b>Omar hatab</b></p>
+                                <small>admin</small>
+                            </div>
+                            <div class="profile-photo">
+                                <img class="img-thumbnail border-img" src="../../assets/user.jpg">
+                            </div>
+                        </div>
+                        <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="" data-i18n="cnprofile">Profile</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><a class="dropdown-item js-logout-btn" href="javascript:;">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+<!--end section header-->

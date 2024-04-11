@@ -1,0 +1,27 @@
+<!-- start aside -->
+<aside [class.open]="isOpen == true">
+    <div class="toggle">
+        <div class="sidebar">
+            <button id="menu" (click)="changeStatusOfAside()">
+                <span class="material-icons-sharp">
+                    menu
+                </span>
+            </button>
+            <a routerLink="/home" [class.active]="activeLink == '/home'" (click)="activeLinkChange()"  id="asideMain">
+                <span class="material-icons-sharp">
+                    dashboard
+                </span>
+                <h5 data-i18n="dashboard">Home</h5>
+                <span class="centerDash"></span>
+            </a>
+            <a routerLink="/users" [class.active]="activeLink == '/users'" (click)="activeLinkChange()" id="asideUsers">
+                <span class="material-icons-sharp">
+                    group
+                    </span>
+                <h5 data-i18n="users">Users</h5>
+                <span class="centerDash"></span>
+            </a>
+        </div>
+    </div>
+</aside>
+<!-- end aside -->

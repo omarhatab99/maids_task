@@ -1,0 +1,105 @@
+
+/* start header */
+
+.header {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+    display: block;
+    height: 70px;
+}
+
+.navbar {
+    height: 70px;
+}
+
+.navbar .container-fluid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.navbar .profile {
+    display: flex;
+    align-items: center;
+    padding: 0px 30px;
+}
+
+@media screen and (max-width: 767px) {
+    .navbar .profile {
+        padding: 0px;
+    }
+}
+
+.navbar .profile .dark-mode {
+    background-color: var(--color-white);
+    border-radius: var(--border-radius-2);
+    margin-right: 20px;
+    padding: 5px;
+}
+
+@media (max-width: 576px) { 
+    .navbar .profile .dark-mode{
+        display: none;
+    }
+}
+
+.navbar .profile .dark-mode span{
+    color: var(--color-dark);
+    font-size: 15px;
+    text-align: center;
+    padding: 3px 8px;
+    cursor: pointer;
+}
+
+.navbar .profile .dark-mode span.active {
+    background-color: var(--color-primary);
+    color: #FFF;
+    border-radius: var(--border-radius-2);
+    cursor: auto;
+}
+
+
+.navbar .profile .profile-info {
+    display: flex;
+    cursor: pointer;
+}
+
+.navbar .profile .profile-info p {
+    font-size: 1rem;
+    margin: 0px;
+}
+
+.navbar .profile .profile-info small {
+    color: var(--color-dark-variant);
+}
+
+.navbar .profile .profile-info .info {
+    padding: 0px 10px;
+}
+
+.navbar .profile .profile-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.header .navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0px 25px;
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .header .navbar-brand {
+        padding: 0px;
+    }
+
+}
+
+.header .navbar-brand img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+/* end header */

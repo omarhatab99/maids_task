@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="w-100 slick-carousel-slider">
+        <ngx-slick-carousel class="carousel py-3" #slickModal="slick-carousel" [config]="slideConfig">
+            <div *ngFor="let slide of slides" ngxSlickItem class="slide">
+                <div class="card-box mx-auto rounded">
+                    <a [routerLink]="['/userDetails' , slide.id]">
+                        <div class="user">
+                            <img [src]="slide.avatar" alt="user_avatar" class="w-100 rounded" height="130px">
+                            <h4 class="user-name p-2 mt-2" [title]="slide.first_name + ' ' + slide.last_name">{{slide.first_name}} {{slide.last_name}}</h4>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+    <div class="row mt-5">
+        <div class="col-12 mb-4">
+            <div class="toolbar d-flex justify-content-end align-items-center py-3 px-3">
+                <div class="input-group search-input" style="width: 40%;">
+                    <span class="input-group-text" id="basic-addon1">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    <input type="number" [(ngModel)]="searchValue" class="form-control" placeholder="Search user by id..." aria-label="Username" aria-describedby="basic-addon1" (keyup)="search()">
+                </div>
+            </div>
+        </div>
+        <div class="col-12" style="min-height: 400px;">
+            <div class="row">
+                <div class="col-6 col-sm-4 col-lg-2" *ngFor="let user of users">
+                    <div class="card-box mx-auto rounded">
+                        <a [routerLink]="['/userDetails' , user.id]">
+                            <div class="user">
+                                <img [src]="user.avatar" alt="user_avatar" class="w-100 rounded" height="130px">
+                                <h4 class="user-name p-2 mt-2" [title]="user.first_name + ' ' + user.last_name">{{user.first_name}} {{user.last_name}}</h4>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="pagination d-flex justify-content-end">
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                            <a class="page-link">Previous</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="javascript:;" (click)="pagination(1 , 5)">1</a></li>
+                        <li class="page-item"><a class="page-link" href="javascript:;" (click)="pagination(2 , 5)">2</a></li>
+                        <li class="page-item">
+                            <a class="page-link" href="javascript:;">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
